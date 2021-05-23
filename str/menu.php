@@ -43,6 +43,10 @@
                 </div>
             </nav>
         </div>
+        <form method="get" action="../search.php" class="search d-flex justify-content-between align-items-center">
+            <input class="act_input" placeholder="Поиск" required name="search_q">
+            <input class="btn btn-primary avt_btn" type="submit" value="Найти">
+        </form>
     </header>
 
     <main class="main pad">

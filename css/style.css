@@ -308,3 +308,28 @@ footer p {
 .mat_text p {
   margin: 12px 0;
 }
+
+.search>input {
+  margin: 0;
+}
+
+.search {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    flex-direction: column;
+  }
+  .search input {
+    width: 100%;
+  }
+}
