@@ -30,11 +30,11 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item nav_item">
-                                <a class="nav-link active" aria-current="page" href="/str/menu.php">Теория
+                                <a class="nav-link" aria-current="page" href="./menu.php?type=prob">Теория
                                     вероятности</a>
                             </li>
                             <li class="nav-item nav_item">
-                                <a class="nav-link" aria-current="page" href="/str/menu.php">Математическая
+                                <a class="nav-link" aria-current="page" href="./menu.php?type=stat">Математическая
                                     статистика</a>
                             </li>
                             <li class="nav-item nav_item">
@@ -67,6 +67,12 @@
       $row = $result->fetch_array(MYSQLI_ASSOC);
       echo "<h3 class='mat_title d-flex justify-content-center'>" . $row['title'] . "</h3>";
 
+      ?>
+        <ul class="nav flex-column">
+            <li class="nav-item" id="theme-nav">
+            </li>
+        </ul>
+        <?php
       echo "<p class='mat_text' id='text'>" . $row['text'] . "</p>";
 
 
@@ -98,6 +104,17 @@
   });
 
   document.querySelector('#text').innerHTML = html;
+
+
+  const titles = document.querySelectorAll('b');
+  const themeNav = document.querySelector('#theme-nav');
+  let count = 0;
+
+  titles.forEach(title => {
+    title.setAttribute('id', String(count));
+    themeNav.innerHTML += `<a class="nav-link" href="#${count}">${title.innerHTML.toUpperCase()}</a>`;
+    count++;
+  });
 </script>
 </body>
 </html>

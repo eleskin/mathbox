@@ -30,10 +30,10 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item nav_item">
-                                <a class="nav-link active" aria-current="page" href="/">Теория вероятности</a>
+                                <a class="nav-link" aria-current="page" href="./str/menu.php?type=prob">Теория вероятности</a>
                             </li>
                             <li class="nav-item nav_item">
-                                <a class="nav-link" aria-current="page" href="/">Математическая статистика</a>
+                                <a class="nav-link" aria-current="page" href="./str/menu.php?type=stat">Математическая статистика</a>
                             </li>
                             <li class="nav-item nav_item">
                                 <a class="nav-link " aria-current="page" href="/">Отзывы</a>
